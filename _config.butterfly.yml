@@ -139,7 +139,7 @@ photofigcaption: false
 copy:
   enable: true
   copyright:
-    enable: true
+    enable: false
     limit_count: 50
 
 # Post
@@ -359,13 +359,19 @@ algolia_search:
   hits:
     per_page: 6
 
+#搜索配置
+search:
+  path: search.xml
+  field: post
+  content: true
+  template: ./search.xml
 # Local search
 local_search:
-  enable: false
+  enable: true
   # Preload the search data when the page loads.
   preload: false
   # Show top n results per article, show all results by setting to -1
-  top_n_per_article: 1
+  top_n_per_article: 3
   # Unescape html strings to the readable one.
   unescape: false
   CDN:

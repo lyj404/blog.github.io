@@ -4,10 +4,10 @@
 
 # Site
 title: Blog
-subtitle: 'lyj blog'
-description: 'this is blog'
-keywords:
-author: LYJ
+subtitle: 'lyj404 blog'
+description: 'this is my blog'
+keywords: lyj404 blog
+author: LYJ404
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
@@ -41,7 +41,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: true
+post_asset_folder: false
 relative_link: false
 future: true
 highlight:
@@ -104,5 +104,5 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/lyj404/blog.github.io.git
+  repo: git@github.com:lyj404/blog.github.io.git
   branch: gh-pages

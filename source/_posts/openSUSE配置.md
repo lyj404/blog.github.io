@@ -3,6 +3,7 @@ title: openSUSE配置
 date: 2023-08-17 21:11:51
 tags: openSUSE
 categories: Linux
+cover: https://pic4.zhimg.com/v2-22f15565837e681da54e326a8f24bd67_1440w.jpg?source=172ae18b
 description: openSUSE配置相关的开发环境
 ---
 # 系统配置
@@ -56,6 +57,11 @@ zypper lr -P
 #删除软件的同时清楚软件依赖
 sudo zypper rm <package> --clean-deps # 将 <package> 替换为你要删除软件包的包名
 sudo zypper rm -u <package> #自动删除要卸载的软件包后不再需要的依赖项。
+
+#添加rpm源
+rpm -ivh <packname>.rpm
+#删除rpm源
+rpm -e <packname>.rpm
 ```
 
 ## 更新系统
@@ -180,12 +186,16 @@ cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 ```shell
 chsh -s /bin/zsh
 ```
-6. 安装主题美化
+6. 配置`~/.zshrc`文件，使得全局命令生效
+```shell
+export PATH=$HOME/bin:/usr/local/bin:/sbin:/usr/sbin:$PATH
+```
+7. 安装主题美化
 ```shell
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 ```
-7. 命令提示插件
+8. 命令提示插件
 ```shell
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
@@ -196,7 +206,7 @@ plugins=(
     zsh-autosuggestions  # 插件之间使用空格隔开
 )
 ```
-8. 语法高亮插件
+9. 语法高亮插件
 ```shell
 #安装插件
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting 
@@ -209,7 +219,7 @@ plugins=(
     zsh-syntax-highlighting
 )
 ```
-9. 开启解压插件
+10. 开启解压插件
 ```bash
 plugins=(
      # other plugins...
@@ -274,6 +284,7 @@ zypper install docker python3-docker-compose
 ```shell
 sudo systemctl enable docker
 ```
+
 ## VSCode
 ```shell
 #导入密钥
@@ -284,4 +295,11 @@ sudo zypper addrepo [https://packages.microsoft.com/yumrepos/vscode](https://pac
 sudo zypper refresh
 #安装vscode
 sudo zypper install code
+```
+
+## MySQL
+```shell
+sudo zypper addrepo http://repo.mysql.com/yum/mysql-8.0-community/suse/15/$basearch/ MySQL MySQL 8.0 Community Server
+sudo zypper addrepo http://repo.mysql.com/yum/mysql-connectors-community/suse/15/$basearch/ MySQL Connectors Community
+sudo zypper addrepo http://repo.mysql.com/yum/mysql-tools-community/suse/15/$basearch/ MySQL Tools Community
 ```
