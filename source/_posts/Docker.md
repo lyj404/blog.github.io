@@ -2,7 +2,7 @@
 title: Docker
 date: 2023-08-24 20:18:49
 tags: Docker
-categories: Java
+categories: Linux
 cover: https://wiki-media-1253965369.cos.ap-guangzhou.myqcloud.com/img/20210116153041.png
 description: Docker是一个开源的容器引擎，是一种操作系统级别的虚拟化技术，Docker让开发者可以打包自己的应用以及依赖到一个可移植的容器当中，然后发布到任何的Linux机器上面。
 ---
