@@ -164,7 +164,7 @@ for i in ${array[@]};do echo $i ;done # 遍历数组，数组元素为空，没�
 
 ## Shell的基本运算符
 ### 算数运算
-![](/image/算数运算.png)
+[![算数运算](https://z1.ax1x.com/2023/09/16/pPftC1P.png)](https://imgse.com/i/pPftC1P)
 ```shell
 #!/bin/bash
 a=3;b=3;
@@ -173,7 +173,7 @@ val=`expr $a + $b`
 echo "Total value : $val"
 ```
 ### 关系运算
-![](/image/关系运算.png)
+[![关系运算](https://z1.ax1x.com/2023/09/16/pPfa1nf.png)](https://imgse.com/i/pPfa1nf)
 ```shell
 #!/bin/bash
 score=90;
@@ -186,7 +186,7 @@ else
 fi
 ```
 ### 逻辑运算
-![](/image/逻辑运算.png)
+[![逻辑运算](https://z1.ax1x.com/2023/09/16/pPftSfI.png)](https://imgse.com/i/pPftSfI)
 ```shell
 #!/bin/bash
 a=$(( 1 && 0))
@@ -195,10 +195,10 @@ echo $a;
 ```
 
 ### 布尔运算
-![](/image/布尔运算.png)
+[![布尔运算](https://z1.ax1x.com/2023/09/16/pPftP6f.png)](https://imgse.com/i/pPftP6f)
 
 ### 字符串运算
-![](/image/字符串运算.png)
+[![字符串运算](https://z1.ax1x.com/2023/09/16/pPfaQjP.png)](https://imgse.com/i/pPfaQjP)
 ```shell
 #!/bin/bash
 a="abc";
@@ -212,7 +212,7 @@ fi
 ```
 
 ### 文件测试运算
-![](/image/文件测试运算.png)
+[![文件测试运算](https://z1.ax1x.com/2023/09/16/pPft9pt.png)](https://imgse.com/i/pPft9pt)
 ```shell
 #!/bin/bash
 file="/usr/learnshell/test.sh"
