@@ -2,7 +2,8 @@
 title: 实现HashMap(JDK1.7)
 date: 2023-09-18 20:18:43
 tags: HashMap
-categories: java
+categories: Java
+cover: https://z1.ax1x.com/2023/09/23/pPT37i4.jpg
 description: HashMap是数据结构中的哈希表在Java中的具体实现。JDK1.7的HashMap采用数组+链表的方式实现。
 ---
 # 哈希表

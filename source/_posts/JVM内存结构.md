@@ -3,7 +3,7 @@ title: JVM内存结构
 date: 2023-09-05 17:53:11
 tags: JVM
 categories: Java
-cover: https://img2.baidu.com/it/u=3432989102,1656872743&fm=253&fmt=auto&app=138&f=JPEG?w=665&h=381
+cover: https://z1.ax1x.com/2023/09/23/pPT32zn.png
 description: JVM（Java Virtual Machine）内存结构是指JVM在运行时将内存划分为不同区域，用于管理程序的运行和数据。
 ---
 # 运行时数据区域
