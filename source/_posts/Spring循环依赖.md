@@ -3,6 +3,7 @@ title: Spring循环依赖
 date: 2023-09-07 18:01:30
 tags: Spring
 categories: Java
+keywords: Spring循环依赖
 cover: https://z1.ax1x.com/2023/09/23/pPT3ooF.jpg
 description: 循环依赖是指两个或多个模块或组件之间相互依赖，形成一个闭环情况。而Spring通过三级缓存解决循环依赖。
 ---

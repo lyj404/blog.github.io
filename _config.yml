@@ -13,13 +13,34 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://lyj404.github.io/blog.github.io
-root: /blog.github.io
-permalink: :year/:month/:day/:title/
+url: https://lyj.rainyun.ink
+root: /
+permalink: :title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  
+# 中文链接转拼音
+permalink_pinyin:
+  enable: true # 启用插件
+  separator: '-' # 分词符，将使用此符号分隔两个汉字间的拼音   
+# 代码压缩
+neat_enable: true
+neat_html:
+  enable: true
+  exclude:
+neat_css:
+  enable: true
+  exclude:
+    - '*.min.css'
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '*.min.js'
 
 # Directory
 source_dir: source
@@ -104,5 +125,5 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:lyj404/blog.github.io.git
+  repo: git@github.com:lyj404/blog.git
   branch: gh-pages

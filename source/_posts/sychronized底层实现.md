@@ -3,6 +3,7 @@ title: sychronized底层实现
 date: 2023-09-20 16:14:47
 tags: sychronized
 categories: Java
+keywords: sychronized底层实现
 cover: https://z1.ax1x.com/2023/09/23/pPT37i4.jpg
 description: sychronized是Java的关键字，用于实现线程之间的同步，保证多个线程对共享资源的安全访问，也被称为同步锁
 ---
@@ -54,7 +55,7 @@ sychronized的底层实现依赖于JVM，因此sychronized的与JVM内存的存�
 通过`javap -c -s -v -l SynchronizedDemo.class`命令反编译代码，可以看到相对应的字节码指令。
 `sychronized`在修饰代码块的时候，JVM采用`monitorenter`和`monitorexit`两个指令来实现同步，`monitorenter`指令指向同步代码块开始的位置，`monitorexit`指令指向同步代码块结束的位置。
 [![Monitorenter](https://z1.ax1x.com/2023/09/20/pP5hvx1.png)](https://imgse.com/i/pP5hvx1)
-`sychronized`在修饰同步的时候，JVM采用`ACC_SYNCHRONIZED`标识符来实现同步，通过这个标识来指明这是一个同步方法
+`sychronized`在修饰实例方法的时候，JVM采用`ACC_SYNCHRONIZED`标识符来实现同步，通过这个标识来指明这是一个同步方法
 [![acc_synchronized](https://z1.ax1x.com/2023/09/20/pP5hj2R.png)](https://imgse.com/i/pP5hj2R)
 >上述的三个命令都是基于`Monitor`实现的。
 

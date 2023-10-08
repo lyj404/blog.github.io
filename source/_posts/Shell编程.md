@@ -3,6 +3,7 @@ title: Shell编程
 date: 2023-08-27 16:47:56
 tags: Shell
 categories: Linux
+keywords: Shell编程
 description: Shell既是一种命令语言，又是一种程序设计语言，在中文中解释“外壳”的意思，就是操作系统的外壳。工作中我们通过shell命令来操作和控制操作系统，在Linux操作系统中的Shell命令就包括touch、cd、pwd、mkdir等等。
 ---
 # Shell

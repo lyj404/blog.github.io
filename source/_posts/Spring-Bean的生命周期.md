@@ -3,6 +3,7 @@ title: Spring Bean的生命周期
 date: 2023-09-07 16:06:24
 tags: Spring
 categories: Java
+keywords: Spring Bean的生命周期
 cover: https://z1.ax1x.com/2023/09/23/pPT3ooF.jpg
 description: 在Java应用中，普通的Java Bean的生命周期很简单。而Spring的Bean的生命周期则比较复杂，Spring的Bean由IOC容器进行实例化、组装和管理。
 ---
