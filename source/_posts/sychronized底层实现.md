@@ -3,6 +3,7 @@ title: sychronized底层实现
 date: 2023-09-20 16:14:47
 tags: sychronized
 categories: Java
+keywords: sychronized底层实现
 cover: https://z1.ax1x.com/2023/09/23/pPT37i4.jpg
 description: sychronized是Java的关键字，用于实现线程之间的同步，保证多个线程对共享资源的安全访问，也被称为同步锁
 ---

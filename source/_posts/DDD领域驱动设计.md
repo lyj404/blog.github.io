@@ -3,6 +3,7 @@ title: DDD领域驱动设计
 date: 2023-10-08 16:29:12
 tags: Domain Driver Design
 categories: BackEnd
+keywords: DDD领域驱动设计
 cover: https://z1.ax1x.com/2023/10/08/pPvQNEn.jpg
 description: DDD是一种软件设计思想和方法论，以领域为核心构建软件设计体系，将业务模型抽象成领域模型进行拆解和封装。
 ---

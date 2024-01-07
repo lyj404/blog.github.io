@@ -3,6 +3,7 @@ title: JUC
 date: 2023-08-27 15:09:51
 tags: JUC
 categories: Java
+keywords: JUC
 cover: https://z1.ax1x.com/2023/09/23/pPT37i4.jpg
 description: JUC（Java Util Concurrent）是Java5之后新增的一组并发编程工具包，提供了一系列高效、线程安全的并发集合，方便在多线程环境下处理共享数据
 ---

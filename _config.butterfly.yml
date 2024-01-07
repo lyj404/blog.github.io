@@ -6,12 +6,11 @@ nav:
   display_title: true
   fixed: true # fixed navigation bar
 
+# Google SisterMap configuration
 Plugins:
   - hexo-generator-sitemap
-
 sitemap:
     path: sitemap.xml
-   
 
 # Menu 目錄
 menu:

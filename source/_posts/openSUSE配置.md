@@ -3,6 +3,7 @@ title: openSUSE配置
 date: 2023-08-17 21:11:51
 tags: OpenSUSE
 categories: Linux
+keywords: openSUSE配置
 cover: https://z1.ax1x.com/2023/09/23/pPT3AVU.png
 description: openSUSE配置相关的开发环境
 ---

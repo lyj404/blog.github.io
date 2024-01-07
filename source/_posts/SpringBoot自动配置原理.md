@@ -3,6 +3,7 @@ title: SpringBoot自动装配原理
 date: 2023-09-26 21:42:12
 tags: SpringBoot
 categories: Java
+keywords: SpringBoot自动装配原理
 cover: https://s11.ax1x.com/2023/09/26/pPHNSxg.png
 description: Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化新Spring应用的初始搭建以及开发过程。
 ---
