@@ -2,24 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://lyj.rainyun.ink/2023/10/08/DDD%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1/</loc>
-    
-    <lastmod>2024-01-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://lyj.rainyun.ink/2023/08/24/Docker/</loc>
-    
-    <lastmod>2024-01-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://lyj.rainyun.ink/2023/08/27/JUC/</loc>
     
     <lastmod>2024-01-07</lastmod>
@@ -110,15 +92,6 @@
   </url>
   
   <url>
-    <loc>https://lyj.rainyun.ink/google01c73cce4b7e7ce6.html</loc>
-    
-    <lastmod>2024-01-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://lyj.rainyun.ink/categories/index.html</loc>
     
     <lastmod>2024-01-07</lastmod>
@@ -129,6 +102,24 @@
   
   <url>
     <loc>https://lyj.rainyun.ink/tags/index.html</loc>
+    
+    <lastmod>2024-01-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lyj.rainyun.ink/2023/10/08/DDD%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1/</loc>
+    
+    <lastmod>2024-01-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lyj.rainyun.ink/2023/08/24/Docker/</loc>
     
     <lastmod>2024-01-07</lastmod>
     
