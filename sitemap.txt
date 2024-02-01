@@ -1,3 +1,4 @@
+https://lyj.rainyun.ink/ddd-ling-yu-qu-dong-she-ji/
 https://lyj.rainyun.ink/docker/
 https://lyj.rainyun.ink/juc/
 https://lyj.rainyun.ink/jvm-nei-cun-jie-gou/
@@ -12,7 +13,6 @@ https://lyj.rainyun.ink/shi-xian-hashmap/
 https://lyj.rainyun.ink/shu-ju-ku-she-ji-gui-fan/
 https://lyj.rainyun.ink/categories/index.html
 https://lyj.rainyun.ink/tags/index.html
-https://lyj.rainyun.ink/ddd-ling-yu-qu-dong-she-ji/
 https://lyj.rainyun.ink/
 https://lyj.rainyun.ink/tags/Domain-Driver-Design/
 https://lyj.rainyun.ink/tags/Docker/
