@@ -20,6 +20,15 @@
   </url>
   
   <url>
+    <loc>https://lyj.rainyun.ink/juc/</loc>
+    
+    <lastmod>2024-03-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://lyj.rainyun.ink/jvm-nei-cun-jie-gou/</loc>
     
     <lastmod>2024-03-02</lastmod>
@@ -39,15 +48,6 @@
   
   <url>
     <loc>https://lyj.rainyun.ink/shell-bian-cheng/</loc>
-    
-    <lastmod>2024-03-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://lyj.rainyun.ink/juc/</loc>
     
     <lastmod>2024-03-02</lastmod>
     
@@ -169,6 +169,13 @@
   </url>
   
   <url>
+    <loc>https://lyj.rainyun.ink/tags/JUC/</loc>
+    <lastmod>2024-03-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://lyj.rainyun.ink/tags/JVM/</loc>
     <lastmod>2024-03-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -184,13 +191,6 @@
   
   <url>
     <loc>https://lyj.rainyun.ink/tags/Shell/</loc>
-    <lastmod>2024-03-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://lyj.rainyun.ink/tags/JUC/</loc>
     <lastmod>2024-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
