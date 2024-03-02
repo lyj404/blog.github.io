@@ -11,15 +11,6 @@
   </url>
   
   <url>
-    <loc>https://lyj.rainyun.ink/docker/</loc>
-    
-    <lastmod>2024-03-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://lyj.rainyun.ink/juc/</loc>
     
     <lastmod>2024-03-02</lastmod>
@@ -101,6 +92,15 @@
   </url>
   
   <url>
+    <loc>https://lyj.rainyun.ink/docker/</loc>
+    
+    <lastmod>2024-03-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://lyj.rainyun.ink/sychronized-di-ceng-shi-xian/</loc>
     
     <lastmod>2024-03-02</lastmod>
@@ -156,13 +156,6 @@
   
   <url>
     <loc>https://lyj.rainyun.ink/tags/Domain-Driver-Design/</loc>
-    <lastmod>2024-03-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://lyj.rainyun.ink/tags/Docker/</loc>
     <lastmod>2024-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -225,6 +218,13 @@
   </url>
   
   <url>
+    <loc>https://lyj.rainyun.ink/tags/Docker/</loc>
+    <lastmod>2024-03-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://lyj.rainyun.ink/tags/sychronized/</loc>
     <lastmod>2024-03-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -255,14 +255,14 @@
   </url>
   
   <url>
-    <loc>https://lyj.rainyun.ink/categories/Linux/</loc>
+    <loc>https://lyj.rainyun.ink/categories/Java/</loc>
     <lastmod>2024-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://lyj.rainyun.ink/categories/Java/</loc>
+    <loc>https://lyj.rainyun.ink/categories/Linux/</loc>
     <lastmod>2024-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
