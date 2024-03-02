@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>.gitignore文件的配置使用</title>
+      <link href="/gitignore-wen-jian-de-pei-zhi-shi-yong/"/>
+      <url>/gitignore-wen-jian-de-pei-zhi-shi-yong/</url>
+      
+        <content type="html"><![CDATA[<p>在使用Git的过程中，有些文件比如说日志、临时文件、编译的中间文件文件等不需要提交到Git仓库，这个时候需要设置对应的忽略规则，来忽略这些文件的提交。使用场景：比如说在使用<code>git add .</code>命令的时候不小心把不想提交的文件添加到缓存中去了，虽然可以使用<code>git reset HEAD example.txt </code> ，又或者是使用<code>git add 具体文件</code>的方式来避免将不想要提交的文件添加到暂存区，但是这样终归没有直接使用<code>git add .</code>方便，这个时候就可以使用Git为我们提供<code>.gitignore</code>文件，只要在文件中申明哪些文件不需要添加到暂存区，然后在使用<code>git add .</code>命令的时候就不会被添加到暂存区了。</p><h1 id="实现在Git中忽略不想提交的文件"><a href="#实现在Git中忽略不想提交的文件" class="headerlink" title="实现在Git中忽略不想提交的文件"></a>实现在Git中忽略不想提交的文件</h1><ol><li>直接在项目中定义.gitignore文件，然后在.gitignore文件中定义要忽略的文件</li><li>在Git项目的设置中指定忽略文件，在<code>.git/info/exclude</code>文件中写入要忽略的文件</li><li>定义Git全局的.gitignore文件，使用命令如下<ul><li><code>git config --global core.excludesfile ~/.gitignore</code></li></ul></li></ol><h1 id="gitignore忽略规则的优先级"><a href="#gitignore忽略规则的优先级" class="headerlink" title=".gitignore忽略规则的优先级"></a>.gitignore忽略规则的优先级</h1><p>由高到低的优先级如下：</p><ol><li>从命令行中读取可用的忽略规则  </li><li>当前目录定义的规则  </li><li>父级目录定义的规则，依次递推  </li><li>$GIT_DIR&#x2F;info&#x2F;exclude 文件中定义的规则  </li><li>core.excludesfile中定义的全局规则</li></ol><h1 id="gitignore的匹配语法"><a href="#gitignore的匹配语法" class="headerlink" title=".gitignore的匹配语法"></a>.gitignore的匹配语法</h1><ol><li>空行：空行将被忽略。</li><li>以 <code>#</code> 开头的表示为注释。</li><li>斜杠 <code>/</code>：如果斜杠出现在行首，表示只匹配项目根目录；如果斜杠出现在其他位置，表示匹配任意位置。</li><li><code>!</code>：感叹号用于取反，即排除某些匹配的文件或目录。</li><li><code>*</code>：星号匹配零个或多个字符。</li><li><code>?</code>：问号匹配一个字符。</li><li><code>**</code>：双星号匹配任意子目录。</li><li><code>/dir/</code>：表示忽略根目录下的<code>dir</code>目录。</li><li><code>dir/</code>：表示忽略任意位置的<code>dir</code>目录。</li><li><code>/*.txt</code>：表示只匹配根目录下的<code>.txt</code>文件。</li><li><code>debug.log</code>：表示忽略任意位置的<code>debug.log</code>文件。</li><li><code>**/logs/</code>：表示匹配所有子目录中的<code>logs</code>目录。</li><li><code>*.log</code>：表示匹配所有以<code>.log</code>结尾的文件。</li><li><code>assets/</code>：表示匹配名为<code>assets</code>的目录。</li><li><code>build</code>：表示匹配名为<code>build</code>的文件或目录。</li><li><code>build/</code>：表示只匹配名为<code>build</code>的目录。<blockquote><p><a href="https://github.com/github/gitignore">gitignore</a>该开源项目收集了所有可用的.gitignore模板</p></blockquote></li></ol><p><strong>Java .gitignore template</strong></p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"># Compiled class file</span><br><span class="line">*.class</span><br><span class="line"></span><br><span class="line"># Log file</span><br><span class="line">*.log</span><br><span class="line"></span><br><span class="line"># BlueJ files</span><br><span class="line">*.ctxt</span><br><span class="line"></span><br><span class="line"># Mobile Tools for Java (J2ME)</span><br><span class="line">.mtj.tmp/</span><br><span class="line"></span><br><span class="line"># Package Files #</span><br><span class="line">*.jar</span><br><span class="line">*.war</span><br><span class="line">*.nar</span><br><span class="line">*.ear</span><br><span class="line">*.zip</span><br><span class="line">*.tar.gz</span><br><span class="line">*.rar</span><br><span class="line"></span><br><span class="line"># virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml</span><br><span class="line">hs_err_pid*</span><br><span class="line">replay_pid*</span><br></pre></td></tr></table></figure><h1 id="gitignore配置不生效原因和解决"><a href="#gitignore配置不生效原因和解决" class="headerlink" title=".gitignore配置不生效原因和解决"></a>.gitignore配置不生效原因和解决</h1><p>在Git中，即使在<code>.gitignore</code>中标明了要忽略的文件或目录，但如果这些文件已经被纳入版本管理，依然会出现在<code>git push</code>的目录中，并且在使用<code>git status</code>查看状态时仍然显示为被追踪的文件。这是因为Git会缓存已经纳入版本管理的文件，即使在<code>.gitignore</code>中声明了忽略路径也不会生效。</p><p>要解决这个问题，需要先将本地缓存删除，然后再进行提交操作。这样就可以确保被声明为忽略的文件不会被提交到版本库中，也不会出现在推送的目录中。<br><strong>解决方法: git清除本地缓存（改变成未track状态），然后再提交:</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">rm</span> -r --cached .</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&#x27;update .gitignore&#x27;</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure><p>或者在clone的时候手动设置不要检查特定文件的更改情况：<code>git update-index --assume-unchanged PATH</code></p><blockquote><p>需要注意的点：<code>.gitignore</code>只能忽略原来没有被track的文件，如果文件已经被纳入了版本库中，则修改<code>.gitignore</code>是无效的。想要<code>.gitignore</code>起作用，必须要在这些文件不在暂存区中才可以，<code>.gitignore</code>文件只是忽略没有被<code>staged(cached)</code>文件，对于已经被<code>staged</code>文件，加入ignore文件时一定要先从<code>staged</code>移除，才可以忽略。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> BackEnd </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MongoDB的基本操作</title>
       <link href="/mongodb/"/>
       <url>/mongodb/</url>

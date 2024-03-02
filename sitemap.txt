@@ -7,6 +7,7 @@ https://lyj.rainyun.ink/shell-bian-cheng/
 https://lyj.rainyun.ink/spring-bean-de-sheng-ming-zhou-qi/
 https://lyj.rainyun.ink/springboot-zi-dong-pei-zhi-yuan-li/
 https://lyj.rainyun.ink/spring-xun-huan-yi-lai/
+https://lyj.rainyun.ink/gitignore-wen-jian-de-pei-zhi-shi-yong/
 https://lyj.rainyun.ink/opensuse-pei-zhi/
 https://lyj.rainyun.ink/sychronized-di-ceng-shi-xian/
 https://lyj.rainyun.ink/shi-xian-hashmap/
@@ -22,6 +23,7 @@ https://lyj.rainyun.ink/tags/MongoDB/
 https://lyj.rainyun.ink/tags/Shell/
 https://lyj.rainyun.ink/tags/Spring/
 https://lyj.rainyun.ink/tags/Spring-Boot/
+https://lyj.rainyun.ink/tags/Git/
 https://lyj.rainyun.ink/tags/OpenSUSE/
 https://lyj.rainyun.ink/tags/sychronized/
 https://lyj.rainyun.ink/tags/HashMap/
