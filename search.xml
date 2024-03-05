@@ -329,6 +329,31 @@
     
     
     <entry>
+      <title>JWT(JSON WEB TOKEN)</title>
+      <link href="/jwt/"/>
+      <url>/jwt/</url>
+      
+        <content type="html"><![CDATA[<p>JWT 是 JSON Web Token 的缩写，是一种用于在网络应用环境间传递安全信息的简洁的、URL安全的表述性声明规范。JWT 可以被用来在不同的应用程序之间传递声明，例如用户身份信息、授权信息等。</p><h1 id="JWT的工作原理"><a href="#JWT的工作原理" class="headerlink" title="JWT的工作原理"></a>JWT的工作原理</h1><ul><li>服务端生成一个JWT令牌，并在其中包含需要传递的声明。</li><li>服务端将JWT令牌发送给客户端。</li><li>客户端在向服务端发送请求时，将JWT令牌包含在请求头中。</li><li>服务端验证JWT令牌的有效性和完整性，并根据声明做出相应的授权策略。</li></ul><h1 id="JWT的优势"><a href="#JWT的优势" class="headerlink" title="JWT的优势"></a>JWT的优势</h1><ol><li>简洁明了：JWT使用JSON格式，易于阅读和理解</li><li>URL安全：JWT可以安全的嵌入在URL中，而不会泄露敏感信息</li><li>可扩展性：JWT可以扩展以支持新的声明和功能。</li></ol><h1 id="JWT的应用场景"><a href="#JWT的应用场景" class="headerlink" title="JWT的应用场景"></a>JWT的应用场景</h1><ol><li>用户身份验证：JWT可以用来在不同的应用程序之间传递用户身份信息，列入在单点登录(SSO)场景中。</li><li>授权：JWT可以用来在不同的应用程序之间传递授权信息，例如允许用户访问特定的资源。</li><li>信息交换：JWT可以用来在不同的应用程序之间安全的交换信息。</li></ol><h1 id="JWT组成"><a href="#JWT组成" class="headerlink" title="JWT组成"></a>JWT组成</h1><p><strong>JWT有三部分组成：</strong></p><ol><li><strong>头部（header）</strong>：头部通常包含两个字段：<ul><li><strong>类型（typ）：</strong> 表示令牌的类型，通常为“JWT”</li><li><strong>签名算法：</strong> 表示签名算法，例如”HS256”、”RS256” 等</li></ul></li><li><strong>载荷（Payload）:</strong> 载荷包含需要传递的声明，例如用户身份信息、授权信息等。声明可以是任何 JSON 对象，例如：<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;iss&quot;</span><span class="punctuation">:</span> <span class="string">&quot;issuer&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;sub&quot;</span><span class="punctuation">:</span> <span class="string">&quot;subject&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;aud&quot;</span><span class="punctuation">:</span> <span class="string">&quot;audience&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;exp&quot;</span><span class="punctuation">:</span> <span class="number">1577836800</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;iat&quot;</span><span class="punctuation">:</span> <span class="number">1577836000</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></li><li><strong>签名（Signature）:</strong> 签名是用于验证令牌真实性和完整性的哈希值。它是使用头部和载荷以及一个密钥生成的。<br><a href="https://imgse.com/i/pFDcgL6"><img src="https://s21.ax1x.com/2024/03/05/pFDcgL6.png" alt="jwt.png"></a><br><strong>JWT的作用主要是防止信息被篡改，而不是为了加密信息被人无法破解。</strong></li></ol><ul><li><strong>防止篡改：</strong> 由于签名是包含在令牌中的，并且是使用秘钥生成的，因此任何对令牌内容的修改都会导致签名验证失败。</li><li><strong>防止伪造：</strong> 由于签名是使用服务器端的秘钥生成的，因此只有服务器端才能生成有效的令牌。</li></ul><p> JWT 的头部和载荷是未加密的，因此任何人都可以查看其中的内容。即使签名是加密的，但签名算法的密钥也是可以被破解的。</p><blockquote><p>JWT常用于在网络应用环境间传递安全信息。JWT 可以防止信息被篡改，但并不是为了加密信息让人无法破解。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> BackEnd </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JWT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>openSUSE配置</title>
       <link href="/opensuse-pei-zhi/"/>
       <url>/opensuse-pei-zhi/</url>
