@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://lyj404.rr.nu/ddd-ling-yu-qu-dong-she-ji/</loc>
+    <loc>https://lyj404.github.io/blog/ddd-ling-yu-qu-dong-she-ji/</loc>
     
     <lastmod>2024-03-10</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/docker/</loc>
+    <loc>https://lyj404.github.io/blog/docker/</loc>
     
     <lastmod>2024-03-10</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/juc/</loc>
+    <loc>https://lyj404.github.io/blog/juc/</loc>
     
     <lastmod>2024-03-10</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/jvm-nei-cun-jie-gou/</loc>
+    <loc>https://lyj404.github.io/blog/jvm-nei-cun-jie-gou/</loc>
     
     <lastmod>2024-03-10</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/mongodb/</loc>
+    <loc>https://lyj404.github.io/blog/mongodb/</loc>
     
     <lastmod>2024-03-10</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/shell-bian-cheng/</loc>
+    <loc>https://lyj404.github.io/blog/shell-bian-cheng/</loc>
     
     <lastmod>2024-03-10</lastmod>
     
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/spring-bean-de-sheng-ming-zhou-qi/</loc>
+    <loc>https://lyj404.github.io/blog/spring-bean-de-sheng-ming-zhou-qi/</loc>
     
     <lastmod>2024-03-10</lastmod>
     
@@ -65,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/springboot-zi-dong-pei-zhi-yuan-li/</loc>
+    <loc>https://lyj404.github.io/blog/springboot-zi-dong-pei-zhi-yuan-li/</loc>
     
     <lastmod>2024-03-10</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/spring-xun-huan-yi-lai/</loc>
+    <loc>https://lyj404.github.io/blog/spring-xun-huan-yi-lai/</loc>
     
     <lastmod>2024-03-10</lastmod>
     
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/gitignore-wen-jian-de-pei-zhi-shi-yong/</loc>
+    <loc>https://lyj404.github.io/blog/gitignore-wen-jian-de-pei-zhi-shi-yong/</loc>
     
     <lastmod>2024-03-10</lastmod>
     
@@ -92,7 +92,7 @@
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/jwt/</loc>
+    <loc>https://lyj404.github.io/blog/jwt/</loc>
     
     <lastmod>2024-03-10</lastmod>
     
@@ -101,7 +101,7 @@
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/opensuse-pei-zhi/</loc>
+    <loc>https://lyj404.github.io/blog/opensuse-pei-zhi/</loc>
     
     <lastmod>2024-03-10</lastmod>
     
@@ -110,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/sychronized-di-ceng-shi-xian/</loc>
+    <loc>https://lyj404.github.io/blog/sychronized-di-ceng-shi-xian/</loc>
     
     <lastmod>2024-03-10</lastmod>
     
@@ -119,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/shi-xian-hashmap/</loc>
+    <loc>https://lyj404.github.io/blog/shi-xian-hashmap/</loc>
     
     <lastmod>2024-03-10</lastmod>
     
@@ -128,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/shu-ju-ku-she-ji-gui-fan/</loc>
+    <loc>https://lyj404.github.io/blog/shu-ju-ku-she-ji-gui-fan/</loc>
     
     <lastmod>2024-03-10</lastmod>
     
@@ -137,7 +137,7 @@
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/categories/index.html</loc>
+    <loc>https://lyj404.github.io/blog/categories/index.html</loc>
     
     <lastmod>2024-03-10</lastmod>
     
@@ -146,7 +146,7 @@
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/tags/index.html</loc>
+    <loc>https://lyj404.github.io/blog/tags/index.html</loc>
     
     <lastmod>2024-03-10</lastmod>
     
@@ -156,7 +156,7 @@
   
 
   <url>
-    <loc>https://lyj404.rr.nu/</loc>
+    <loc>https://lyj404.github.io/blog</loc>
     <lastmod>2024-03-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -164,98 +164,98 @@
 
   
   <url>
-    <loc>https://lyj404.rr.nu/tags/Domain-Driver-Design/</loc>
+    <loc>https://lyj404.github.io/blog/tags/Domain-Driver-Design/</loc>
     <lastmod>2024-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/tags/Docker/</loc>
+    <loc>https://lyj404.github.io/blog/tags/Docker/</loc>
     <lastmod>2024-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/tags/JUC/</loc>
+    <loc>https://lyj404.github.io/blog/tags/JUC/</loc>
     <lastmod>2024-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/tags/JVM/</loc>
+    <loc>https://lyj404.github.io/blog/tags/JVM/</loc>
     <lastmod>2024-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/tags/MongoDB/</loc>
+    <loc>https://lyj404.github.io/blog/tags/MongoDB/</loc>
     <lastmod>2024-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/tags/Shell/</loc>
+    <loc>https://lyj404.github.io/blog/tags/Shell/</loc>
     <lastmod>2024-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/tags/Spring/</loc>
+    <loc>https://lyj404.github.io/blog/tags/Spring/</loc>
     <lastmod>2024-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/tags/Spring-Boot/</loc>
+    <loc>https://lyj404.github.io/blog/tags/Spring-Boot/</loc>
     <lastmod>2024-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/tags/Git/</loc>
+    <loc>https://lyj404.github.io/blog/tags/Git/</loc>
     <lastmod>2024-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/tags/JWT/</loc>
+    <loc>https://lyj404.github.io/blog/tags/JWT/</loc>
     <lastmod>2024-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/tags/OpenSUSE/</loc>
+    <loc>https://lyj404.github.io/blog/tags/OpenSUSE/</loc>
     <lastmod>2024-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/tags/sychronized/</loc>
+    <loc>https://lyj404.github.io/blog/tags/sychronized/</loc>
     <lastmod>2024-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/tags/HashMap/</loc>
+    <loc>https://lyj404.github.io/blog/tags/HashMap/</loc>
     <lastmod>2024-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/tags/DataBase/</loc>
+    <loc>https://lyj404.github.io/blog/tags/DataBase/</loc>
     <lastmod>2024-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -264,21 +264,21 @@
 
   
   <url>
-    <loc>https://lyj404.rr.nu/categories/BackEnd/</loc>
+    <loc>https://lyj404.github.io/blog/categories/BackEnd/</loc>
     <lastmod>2024-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/categories/Linux/</loc>
+    <loc>https://lyj404.github.io/blog/categories/Linux/</loc>
     <lastmod>2024-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://lyj404.rr.nu/categories/Java/</loc>
+    <loc>https://lyj404.github.io/blog/categories/Java/</loc>
     <lastmod>2024-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
