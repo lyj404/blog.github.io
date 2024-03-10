@@ -10,4 +10,4 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://lyj.ates.top/sitemap.xml
+Sitemap: https://username.github.io/blog/sitemap.xml
