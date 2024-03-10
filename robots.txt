@@ -10,4 +10,4 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://username.github.io/blog/sitemap.xml
+Sitemap: https://lyj404.rr.nu/sitemap.xml
