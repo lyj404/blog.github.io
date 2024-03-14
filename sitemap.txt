@@ -2,6 +2,7 @@ https://lyj404.github.io/blog/ddd-ling-yu-qu-dong-she-ji/
 https://lyj404.github.io/blog/docker/
 https://lyj404.github.io/blog/juc/
 https://lyj404.github.io/blog/jvm-nei-cun-jie-gou/
+https://lyj404.github.io/blog/linux-mu-lu-zuo-yong-xiang-jie/
 https://lyj404.github.io/blog/mongodb/
 https://lyj404.github.io/blog/shell-bian-cheng/
 https://lyj404.github.io/blog/spring-bean-de-sheng-ming-zhou-qi/
@@ -20,6 +21,7 @@ https://lyj404.github.io/blog/tags/Domain-Driver-Design/
 https://lyj404.github.io/blog/tags/Docker/
 https://lyj404.github.io/blog/tags/JUC/
 https://lyj404.github.io/blog/tags/JVM/
+https://lyj404.github.io/blog/tags/Linux/
 https://lyj404.github.io/blog/tags/MongoDB/
 https://lyj404.github.io/blog/tags/Shell/
 https://lyj404.github.io/blog/tags/Spring/
