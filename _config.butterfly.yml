@@ -608,10 +608,9 @@ google_adsense:
 
 # Verification (站長驗證)
 # --------------------------------------
-
 site_verification:
-  # - name: google-site-verification
-  #   content: xxxxxx
+  - name: bing-site-verification
+    content: 978A0221E9EFD1E5A9473AE7289C3449
   # - name: baidu-site-verification
   #   content: xxxxxxx
 
