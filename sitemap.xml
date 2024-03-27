@@ -2,24 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://lyj404.github.io/blog/ddd-ling-yu-qu-dong-she-ji/</loc>
-    
-    <lastmod>2024-03-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://lyj404.github.io/blog/docker/</loc>
-    
-    <lastmod>2024-03-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://lyj404.github.io/blog/juc/</loc>
     
     <lastmod>2024-03-27</lastmod>
@@ -172,6 +154,24 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://lyj404.github.io/blog/ddd-ling-yu-qu-dong-she-ji/</loc>
+    
+    <lastmod>2024-03-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lyj404.github.io/blog/docker/</loc>
+    
+    <lastmod>2024-03-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   <url>
     <loc>https://lyj404.github.io/blog</loc>
@@ -183,13 +183,6 @@
   
   <url>
     <loc>https://lyj404.github.io/blog/tags/Domain-Driver-Design/</loc>
-    <lastmod>2024-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://lyj404.github.io/blog/tags/Docker/</loc>
     <lastmod>2024-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -225,6 +218,13 @@
   
   <url>
     <loc>https://lyj404.github.io/blog/tags/Shell/</loc>
+    <lastmod>2024-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://lyj404.github.io/blog/tags/Docker/</loc>
     <lastmod>2024-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -296,14 +296,14 @@
   </url>
   
   <url>
-    <loc>https://lyj404.github.io/blog/categories/Linux/</loc>
+    <loc>https://lyj404.github.io/blog/categories/Java/</loc>
     <lastmod>2024-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://lyj404.github.io/blog/categories/Java/</loc>
+    <loc>https://lyj404.github.io/blog/categories/Linux/</loc>
     <lastmod>2024-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
