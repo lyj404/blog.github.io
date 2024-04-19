@@ -51,6 +51,8 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+ - google01c73cce4b7e7ce6.html
+ - BingSiteAuth.xml
 
 # Writing
 new_post_name: :title.md # File name of new posts
