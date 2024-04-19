@@ -10,4 +10,4 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://lyj.cloudns.ch/sitemap.xml
+Sitemap: https://lyj404.github.io/blog/sitemap.xml
