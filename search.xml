@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>ssh配置文件说明</title>
+      <link href="/ssh-pei-zhi-wen-jian-shuo-ming/"/>
+      <url>/ssh-pei-zhi-wen-jian-shuo-ming/</url>
+      
+        <content type="html"><![CDATA[<p><code>OpenSSH</code>是SSH（Secure Shell）协议的免费且开源的实现，主要用于安全地远程控制计算机或在计算机之间传输文件。SSH协议通过加密通道确保了数据传输的安全性，而OpenSSH则提供了这一协议的具体应用。 为了提升用户体验和操作便捷性，OpenSSH客户端允许用户通过一个名为<code>config</code>的配置文件自定义SSH连接的参数。这个配置文件位于用户的<code>~/.ssh</code>目录中，该目录通常会在用户首次运行SSH命令时自动创建。通过编辑<code>config</code>文件，用户可以为不同的主机设置特定的连接选项，如自定义的用户名、端口号、使用的私钥文件等，从而简化日常的SSH连接操作。</p><blockquote><p><code>~/.ssh/config</code>该位置的配置通常只影响特定用户，<code>/etc/ssh/ssh_config</code>位置的配置是全局配置文件，影响系统上的所有用户</p></blockquote><h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><p><code>config</code>配置文件由一系列的配置指令实现，每一个指令占一行。注释以<code>#</code>开头</p><h1 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h1><ol><li><strong>Host：</strong> 用于指定后继指令适用的主机。可以是单个主机名、IP地址，或者使用通配符<code>*</code>来匹配所有主机。</li><li><strong>HostName：</strong> 指定要连接的远程主机的名称或IP地址。</li><li><strong>Port：</strong> 指定远程主机上的端口号，默认为22</li><li><strong>User：</strong> 指定要使用的远程用户名。</li><li><strong>IdentityFile：</strong> 指定包含用户的私钥的文件路径。</li><li><strong>IdentitiesOnly：</strong> 设置为<code>yes</code>时，仅使用<code>IdentityFile</code>中指定的私钥进行认证。</li><li><strong>AddKeysToAgent：</strong> 设置为<code>yes</code>时，将私钥添加到<code>ssh-agent</code>。</li><li><strong>UseKeychain：</strong> 在macOS上，指定是否使用macOS的keychain存储私钥。</li><li><strong>ForwardAgent：</strong> 指定一个或多个跳板机（jump host），格式为<code>user@host</code>，用于连接到目标主机。</li><li><strong>LocalForward：</strong> 设置为<code>yes</code>时，允许转发本地的认证代理（如<code>ssh-agent</code>）到远程主机。</li><li><strong>RemoteForward：</strong> 设置远程端口转发。<blockquote><p><code>ssh-agent</code>用于在用户使用 SSH 进行认证时，自动提供用户的私钥。它是 Openssh 的一部分，</p></blockquote></li></ol><h2 id="示例配置"><a href="#示例配置" class="headerlink" title="示例配置"></a>示例配置</h2><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"># 为所有主机设置默认的用户名</span><br><span class="line">Host *</span><br><span class="line">  User lyj</span><br><span class="line"></span><br><span class="line"># 连接到example.com的特定配置</span><br><span class="line">Host example.com</span><br><span class="line">  HostName real.example.com</span><br><span class="line">  User specialuser</span><br><span class="line">  Port 20</span><br><span class="line">  IdentityFile ~/.ssh/my_special_key</span><br><span class="line"></span><br><span class="line"># 使用跳板机连接到目标主机</span><br><span class="line">Host targethost</span><br><span class="line">  ProxyJump user@jumphost</span><br><span class="line"></span><br><span class="line"># 本地端口转发</span><br><span class="line">Host gateway</span><br><span class="line">  LocalForward 8080 localhost:80</span><br></pre></td></tr></table></figure><blockquote><p>在使用ssh命令的时候，默认先查找全局配置文件，然后在查找用户的配置文件。如果找到匹配的<code>Host</code>条目，它会应用相应的配置指令。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Debian实现核显和Nvidia独显切换</title>
       <link href="/debian-shi-xian-he-xian-he-nvidia-du-xian-qie-huan/"/>
       <url>/debian-shi-xian-he-xian-he-nvidia-du-xian-qie-huan/</url>
