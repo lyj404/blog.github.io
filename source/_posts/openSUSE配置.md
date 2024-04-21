@@ -306,9 +306,12 @@ git config --global user.name "lyj" # 改成你的名字
 git config --global credential.helper store
 
 # GitHub生成秘钥
-ssh-keygen -t rsa -b 4096 -C "2063074967@qq.com"
+ssh-keygen -t rsa -b 4096 -C "lyj404@qq.com"
 
-# 将密钥添加到 SSH 代理
+# 创建或编辑 ~/.ssh/config 文件，添加以下内容，来简化ssh认证流程
+IdentityFile ~/.ssh/id_rsa # 指定了默认的GitHub私钥文件位置
+
+# 或者通过将密钥添加到 SSH 代理来简化认证流程
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 ```
