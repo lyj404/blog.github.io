@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Debian编译Emacs</title>
+      <link href="/debian-bian-yi-emacs/"/>
+      <url>/debian-bian-yi-emacs/</url>
+      
+        <content type="html"><![CDATA[<h1 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h1><p>Debian编译Emacs需要一些依赖，下载方法如下：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt build-dep emacs</span><br><span class="line">sudo apt install libtree-sitter-dev</span><br></pre></td></tr></table></figure><h2 id="下载和解压Emacs"><a href="#下载和解压Emacs" class="headerlink" title="下载和解压Emacs"></a>下载和解压Emacs</h2><p><a href="https://mirror.its.dal.ca/gnu/emacs/emacs-29.3.tar.xz">Emacs29.3</a>下载地址</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">下载</span></span><br><span class="line">wget https://mirror.its.dal.ca/gnu/emacs/emacs-29.3.tar.xz</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">解压</span></span><br><span class="line">tar xvf emacs-29.3.tar.xz</span><br></pre></td></tr></table></figure><h1 id="编译Emacs"><a href="#编译Emacs" class="headerlink" title="编译Emacs"></a>编译Emacs</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">生成配置脚本和Makefile</span></span><br><span class="line">./autogen.sh</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">配置编译选项</span></span><br><span class="line">./configure --with-native-compilation=aot --with-native-compilation --with-json --with-tree-sitter CC=gcc-12</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">设置8个核心并行编译</span></span><br><span class="line">make -j 8</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看Emacs版本</span></span><br><span class="line">src/emacs --version</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">快速启动测试一下Emacs</span></span><br><span class="line">src/emacs -Q</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将编译后的Emacs安装到指定目录</span></span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure><blockquote><p>如果使用的是Wayland，可以需要添加<code>--with-pgtk</code>选项以获得更好的兼容性</p></blockquote><ul><li><code>--without-compress-install</code>是在安装时不要压缩 Emacs 的文档和信息文件。这可以使安装过程更快，但会增加磁盘空间的使用</li><li><code>--with-native-compilation</code> 启用 Emacs 的原生编译支持，<code>aot</code> 指定了原生编译的具体类型</li><li><code>--with-json</code> 允许 Emacs 支持 JSON 文件的读写操作</li><li><code>--with-tree-sitter</code> 启用对 Tree-sitter 语法高亮库的支持</li><li><code>CC=gcc-12</code> 指定使用 <code>gcc-12</code> 作为编译器来编译 Emacs</li></ul><h1 id="卸载Emacs"><a href="#卸载Emacs" class="headerlink" title="卸载Emacs"></a>卸载Emacs</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">卸载Emacs</span></span><br><span class="line">sudo make uninstall</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">清理构建文件</span></span><br><span class="line">make clean </span><br><span class="line">make distclean</span><br></pre></td></tr></table></figure><ul><li><code>make clean</code> 清除编译过程中生成的文件，但不删除配置文件和日志</li><li><code>make distclean</code> 更彻底地清理，包括删除配置文件和日志，回到初始状态</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Emacs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ssh配置文件说明</title>
       <link href="/ssh-pei-zhi-wen-jian-shuo-ming/"/>
       <url>/ssh-pei-zhi-wen-jian-shuo-ming/</url>
