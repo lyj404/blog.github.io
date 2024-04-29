@@ -187,9 +187,10 @@ proxychains4 <你的命令行>
 # 使用命令安装
 sudo zypper search font
 ```
-**直接下载Nerd Font字体**
+**手动安装，直接下载Nerd Font字体**
 [FiraCode Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip)
-
+对于下载之后的字体解压，并复制到`/usr/share/fonts/`目录下
+> `/usr/share/fonts/`是系统字体目录，`~/.local/share/fonts/`是用户字体目录，`/usr/share/X11/fonts/`是x11字体目录
 **刷新字体**
 ```shell
 fc-cache -fv
