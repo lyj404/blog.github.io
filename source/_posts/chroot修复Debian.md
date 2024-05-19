@@ -1,9 +1,9 @@
 ---
-title: chroot修复Debian的EFI
+title: chroot修复Debian
 date: 2024-03-27 10:52:44
 tags: Linux
 categories: Linux
-keywords: chroot修复Debian的EFI
+keywords: chroot修复Debian
 cover: https://s21.ax1x.com/2024/03/14/pFcL7lj.png
 description: chroot是一个Unix-like系统中的命令，用于改变进程的根目录，可用于系统恢复和修复
 ---
@@ -99,3 +99,25 @@ sudo umount -Rlv /mnt/debian/{dev,proc,sys}
 `-l`:  立即卸载，即使文件系统正被使用也会立刻卸载
 `-v`: 显示详细信息，包括每个步骤的操作信息
 执行上诉步骤之后，EFI分区就已经修复好了，在重启电脑之后即可在BIOS中看到对应EFI启动项
+
+# cinnamon桌面无法启动问题描述
+由于最近删除了一些软件，因此使用了`apt`的`autoremove`命令来清理一些系统中不必要包和依赖，由于`autoremove`命令统计出来可以清理的包名太多，一时没细看，因此导致我的cinnamon桌面挂了，报错信息如下：Filaed to load session 'cinnamon'
+## 修复过程
+由于我的`network-manager`也被`autoremove`清理了，因此只好通过`chroot`去修复，先按照上诉方法挂在自己的系统
+**复制livecd的文件到自己的系统**
+```shell
+# 目录根据自己的挂在目录来
+sudo cp -v /etc/resolv.conf /mnt/debian/etc
+```
+> 因为我使用的DHCP来自动获取网络配置，而我的网络相关的软件由于已经被卸载，所以需要livecd的网络配置，而DHCP 客户端通常会自动生成或修改 `/etc/resolv.conf` 文件
+
+复制完成之后可以执行上面的chroot命令，执行之后，由于我的network-manager已经别卸载所以需要先安装
+```shell
+sudo apt install network-manager
+```
+### 修复cinnamon桌面环境
+勤快的可以查看`apt`的日志，从而获取到autoremove移除了那些依赖，`apt`日志目录如下/var/log/apt/`，我由于比较懒惰，因此直接安装cinnamon桌面了
+```shell
+ sudo apt install task-cinnamon-desktop
+```
+安装成功之后退出root用户，并按照上诉的教程卸载挂在的虚拟目录。
