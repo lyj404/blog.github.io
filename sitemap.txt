@@ -1,5 +1,6 @@
 https://lyj.cloudns.ch/ddd-ling-yu-qu-dong-she-ji/
 https://lyj.cloudns.ch/debian-shi-xian-he-xian-he-nvidia-du-xian-qie-huan/
+https://lyj.cloudns.ch/debian-ri-chang-shi-yong-ji-lu/
 https://lyj.cloudns.ch/debian-bian-yi-emacs/
 https://lyj.cloudns.ch/docker/
 https://lyj.cloudns.ch/juc/
