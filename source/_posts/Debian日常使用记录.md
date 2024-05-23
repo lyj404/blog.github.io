@@ -137,3 +137,23 @@ command &> output.log
 ```
 该命令会将 `command` 的所有输出（包括错误信息）重定向到 `output.log` 文件
 
+# 修复Linux系统下WPS打不开PDF
+Linux系统下打不开PDF是缺少了一个依赖文件`libtiff.so.5`
+**解决方法如下：**
+```shell
+sudo ln -s /usr/lib/x86_64-linux-gnu/libtiff.so.6.0.0 /usr/lib/x86_64-linux-gnu/libtiff.so.5
+```
+**查看是否链接成功**
+```shell
+ls /usr/lib/x86_64-linux-gnu | grep libtiff
+# 输出结果如下
+libtiff.a
+libtiff.so
+libtiff.so.5
+libtiff.so.6
+libtiff.so.6.0.0
+libtiffxx.a
+libtiffxx.so
+libtiffxx.so.6
+libtiffxx.so.6.0.0
+```
