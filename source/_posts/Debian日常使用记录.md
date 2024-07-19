@@ -157,3 +157,4 @@ libtiffxx.so
 libtiffxx.so.6
 libtiffxx.so.6.0.0
 ```
+> 在Linux操作系统下WPS不能将word转换成PDF也是因为缺少`libtiff.so.5`
