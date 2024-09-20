@@ -4,7 +4,7 @@ date: 2024-09-15 20:32:11
 tags: Linux
 categories: Linux
 keywords: Linux通用配置文件
-cover: https://s21.ax1x.com/2024/03/14/pFcL7lj.png
+cover: https://s21.ax1x.com/2024/09/20/pAKX2o4.png
 description: Endeavor OS安装显卡驱动记录，arch系列皆通用
 ---
 # 核显驱动安装
@@ -55,8 +55,31 @@ sudo systemctl enable optimus-manager.service
 sudo pacman -S bbswitch
 ```
 
-> 开启独显模式可能会不生效，需要将NVIDIA 持久化守护进程设置为开机自启动，并重启设备，如果还是不生效，尝试将WayLand切换到Xorg，NVIDIA驱动对于WayLand支持不够友好
+> 开启独显模式可能会不生效，需要将NVIDIA 持久化守护进程设置为开机自启动，并重启设备，如果还是不生效，则需查看是否是X11协议
 
 ```bash
 sudo systemctl enable nvidia-persistenced
 ```
+# WayLand下使用NVIDIA显卡驱动
+## 配置环境变量
+需要在`/etc/environment`下配置相关的环境变量
+```shell
+GBM_BACKEND=nvidia-drm
+__GLX_VENDOR_LIBRARY_NAME=nvidia
+ENABLE_VKBASALT=1
+LIBVA_DRIVER_NAME=nvidia
+```
+## kernel modules 配置
+需要在`/etc/mkinitcpio.conf`添加相关的配置，如找不到对应的文件，则是系统没有安装`mkinitcpio`，需要先安装`mkinitcpio`，安装之后会自动生成`/etc/mkinitcpio.conf`
+```bash
+sudo pacman -S mkinitcpio
+```
+在`/etc/mkinitcpio.conf`中找到`MODULES=()`那一行，并在小括号中添加`nvidia nvidia_modeset nvidia_uvm nvidia_drm`，除此之外还需查看`hooks=()`中是否有`kms`这个值，如有则需删除该值
+### 创建配置文件
+新建一个文件`/etc/modprobe.d/nvidia.conf`，并向该文件添加一下内容：
+```shell
+blacklist nouveau
+options nvidia_drm modeset=1 fbdev=1
+```
+最后执行`sudo mkinitcpio -P`，来重新生成initramfs
+>以上操作需重启系统，才会生效
