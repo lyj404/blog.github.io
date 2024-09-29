@@ -1,11 +1,11 @@
 ---
-title: Endeavor OS安装显卡驱动
+title: Endeavour OS安装显卡驱动
 date: 2024-09-15 20:32:11
 tags: Linux
 categories: Linux
 keywords: Linux通用配置文件
 cover: https://s21.ax1x.com/2024/09/20/pAKX2o4.png
-description: Endeavor OS安装显卡驱动记录，arch系列皆通用
+description: Endeavour OS安装显卡驱动记录，arch系列皆通用
 ---
 # 核显驱动安装
 ## Intel核显驱动

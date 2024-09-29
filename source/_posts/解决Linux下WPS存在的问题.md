@@ -1,7 +1,7 @@
 ---
 title: 解决Linux下WPS存在的问题
 date: 2024-09-29 20:41:59
-tags: Debian
+tags: Endeavour OS
 categories: Linux
 keywords: WPS
 cover: https://s21.ax1x.com/2024/09/29/pA1gr6J.jpg
