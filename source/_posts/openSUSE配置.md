@@ -317,26 +317,6 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 ```
 
-## WPS
-**卸载LibreOffice**
-```shell
-sudo zypper remove libreoffice libreoffice-langpack-*
-```
-**安装WPS，将windows中的字体拷贝到opensuse**
-```shell
-# 创建字体目录
-sudo mkdir /usr/share/fonts/WindowsFonts
-
-# 复制字体
-sudo cp Fonts/* /usr/share/fonts/WindowsFonts
-
-# 赋权
-sudo chmod 644 /usr/share/fonts/WindowsFonts/*
-
-# 刷新
-fc-cache -f
-```
-
 ## VSCode
 ```shell
 #导入密钥
