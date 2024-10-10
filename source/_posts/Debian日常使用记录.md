@@ -1,11 +1,11 @@
 ---
-title: Debian日常使用记录
+title: Linux日常使用记录
 date: 2024-05-19 16:49:49
 tags: Debian
 categories: Linux
 keywords: Debian
 cover: https://s21.ax1x.com/2024/04/16/pFxKR2t.png
-description: Debian是完全由自由软件组成的类UNIX操作系统，其包含的多数软体使用GNU通用公共许可协议授权，并由Debian计划的参与者组成团队对其进行打包、开发与维护。
+description: 该文章记录了日常使用Linux过程中一些我容易遗忘的内容
 ---
 # 更换当前语言
 **列出当前安装的语言：**
@@ -137,3 +137,212 @@ command &> output.log
 ```
 该命令会将 `command` 的所有输出（包括错误信息）重定向到 `output.log` 文件
 
+# Linux系统常用命令
+## 文件和目录管理
+**`ls`**：列出目录内容
+```shell
+ls -l   # 以详细列表的形式列出文件
+ls -a   # 显示所有文件，包括隐藏文件
+```
+**`cd`**：更改目录
+```shell
+cd /path/to/directory   # 切换到指定目录
+cd ..                   # 返回上一级目录
+```
+**`pwd`**：显示当前工作目录
+```shell
+pwd   # 显示当前所在的目录路径
+```
+**`cp`**：复制文件或目录
+```shell
+cp source.txt destination.txt    # 复制文件
+cp -r source_dir/ destination/   # 复制目录
+```
+**`mv`**：移动或重命名文件或目录
+```shell
+mv oldname.txt newname.txt   # 重命名文件
+mv file.txt /path/to/newdir/ # 移动文件到新目录
+```
+**`rm`**：删除文件或目录
+```shell
+rm file.txt       # 删除文件
+rm -r directory/  # 递归删除目录及其内容
+```
+**`mkdir`**：创建目录
+```shell
+mkdir new_directory   # 创建新目录
+mkdir -p path/to/new_directory  # 递归创建目录
+```
+**`touch`**：创建空文件或更新文件的时间戳
+```shell
+touch newfile.txt
+```
+**`find`**：用于在目录树中查找文件和目录
+* *`-name`**：按文件名查找
+```shell
+find /path/to/search -name "*.txt"   # 查找所有以 .txt 结尾的文件
+```
+* **`-type`**：按文件类型查找
+```shell
+find /path/to/search -type d   # 查找所有目录
+find /path/to/search -type f   # 查找所有普通文件
+```
+* **`-size`**：按文件大小查找
+```shell
+find /path/to/search -size +1M   # 查找大于 1MB 的文件
+```
+* **`-mtime`**：按修改时间查找
+```shell
+find /path/to/search -mtime -7   # 查找 7 天内修改过的文件
+```
+* **`-exec`**：对找到的文件执行命令
+```shell
+find /path/to/search -name "*.log" -exec rm {} \;   # 查找并删除所有 .log 文件
+```
+**`grep`** 命令：用于搜索文件中的文本模式
+* **`-i`**：忽略大小写
+```shell
+grep -i "pattern" file.txt   # 搜索时忽略大小写
+```
+* **`-r`**：递归搜索目录
+```shell
+grep -r "pattern" /path/to/dir   # 递归搜索目录中的文件
+```
+* **`-v`**：排除匹配项
+```shell
+grep -v "pattern" file.txt   # 显示不包含 "pattern" 的行
+```
+* **`-n`**：显示匹配行的行号
+```shell
+grep -n "pattern" file.txt   # 显示包含 "pattern" 的行及其行号
+```
+* **`-l`**：显示包含匹配项的文件名
+```shell
+grep -l "pattern" /path/to/dir/*   # 仅显示包含匹配项的文件名
+```
+## 文件查看和编辑
+**`cat`**：显示文件内容
+```shell
+cat file.txt
+```
+**`more`** 和 **`less`**：分页查看文件内容
+```shell
+more file.txt   # 从头开始显示文件内容
+less file.txt   # 支持上下滚动查看文件内容
+```
+**`head`** 和 **`tail`**：查看文件的头部或尾部内容
+```shell
+head -n 10 file.txt   # 查看文件的前 10 行
+tail -n 10 file.txt   # 查看文件的后 10 行
+```
+**`nano`** 或 **`vi`** / **`vim`**：编辑文件
+```shell
+nano file.txt    # 使用 nano 编辑器打开文件
+vim file.txt     # 使用 vim 编辑器打开文件
+```
+## 系统信息和管理
+**`df`**：显示磁盘空间使用情况
+```shell
+df -h   # 以人类可读的格式显示磁盘使用情况
+```
+**`du`**：显示文件或目录的大小
+```shell
+du -sh /path/to/directory   # 递归显示目录大小
+```
+**`free`**：显示内存使用情况
+```shell
+free -h   # 以人类可读的格式显示内存使用情况
+```
+**`top`** 和 **`htop`**：实时显示系统资源和进程信息
+```shell
+top    # 显示实时的系统资源使用信息
+```
+**`ps`**：显示当前进程信息
+```shell
+ps -aux   # 显示所有用户的所有进程
+```
+* `-e`或`-A`：显示所有进程
+* `-f`：显示完整格式
+* `-u`：按用户过滤进程
+* `-aux`：显示所有进程，包括不属于终端的进程，并显示详细信息
+**`kill`** 和 **`killall`**：终止进程
+```shell
+kill PID         # 终止指定 PID 的进程
+killall process  # 终止指定名称的进程
+```
+* `kill -9`：强制终止进程
+*  `kill -6`：让进程异常终止
+* `kill -l`：列出所有信号名称
+*  `kill -15`：发送默认终止信号（较为优雅地终止）
+**`shutdown`** 和 **`reboot`**：关机和重启系统
+```shell
+sudo shutdown -h now   # 立即关机
+sudo reboot            # 重启系统
+```
+## 网络管理
+**`ifconfig`** 或 **`ip`**：查看和配置网络接口
+```shell
+ifconfig
+ip addr show
+```
+**`ping`**：测试网络连通性
+```shell
+ping google.com
+```
+**`curl`** 和 **`wget`**：下载文件或测试 HTTP 请求
+```shell
+curl http://example.com
+wget http://example.com/file.zip
+```
+**`netstat`** 或 **`ss`**：查看网络连接和端口使用情况
+```shell
+netstat -tuln   # 显示所有监听的端口
+ss -tuln        # 类似于 netstat，但输出更快
+```
+## 权限和用户管理
+**`chmod`**：更改文件权限
+```shell
+chmod 755 file.txt    # 设置文件权限为 755
+chmod +x script.sh    # 给脚本添加可执行权限
+```
+- **文件所有者（7）**：`rwx`（读、写、执行）
+- **组用户（5）**：`r-x`（读和执行，没有写权限）
+- **其他用户（5）**：`r-x`（读和执行，没有写权限）
+**`chown`**：更改文件或目录的所有者
+```shell
+chown user:group file.txt   # 修改文件的所有者
+```
+**`sudo`**：以超级用户权限执行命令
+```shell
+sudo command   # 使用 sudo 以 root 权限运行命令
+```
+**`useradd`** 和 **`usermod`**：管理用户
+```shell
+sudo useradd newuser         # 添加新用户
+sudo usermod -aG sudo user   # 将用户添加到 sudo 组
+```
+## 压缩和解压缩
+**`tar`**：打包和解压 tar 文件
+```shell
+tar -czvf archive.tar.gz /path/to/directory   # 打包并压缩
+tar -xzvf archive.tar.gz                      # 解压
+```
+* `-c`：创建新的`tar`文件
+* `-x`：解压`tar`文件
+* `-z`：使用`gzip`压缩或解压
+* `-j`：使用`bzip2`压缩或解压
+* `-f`：指定文件名
+* `-v`：显示详细信息
+**`zip`** 和 **`unzip`**：压缩和解压 zip 文件
+```shell
+zip -r archive.zip /path/to/directory   # 压缩文件
+unzip archive.zip                       # 解压 zip 文件
+```
+* `zip -r`：递归压缩目录
+* `zip -e`：为压缩文件设置密码
+* `zip -x`：排除指定文件
+**`gzip`** 和 **`gunzip`**：压缩和解压 gzip 文件
+```shell
+gzip file.txt    # 压缩文件
+gunzip file.gz   # 解压文件
+```
