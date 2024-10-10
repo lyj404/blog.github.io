@@ -4,7 +4,7 @@ date: 2024-05-19 16:49:49
 tags: Debian
 categories: Linux
 keywords: Debian
-cover: https://s21.ax1x.com/2024/04/16/pFxKR2t.png
+cover: https://s21.ax1x.com/2024/03/14/pFcL7lj.png
 description: 该文章记录了日常使用Linux过程中一些我容易遗忘的内容
 ---
 # 更换当前语言
