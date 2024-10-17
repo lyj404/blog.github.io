@@ -177,3 +177,72 @@ systemctl disable app.service
 # 查看服务状态
 systemctl status app.service
 ```
+# fonts.conf文件
+fonts.conf是字体配置文件，用于定制和调整字体的渲染及优先级设置。以下是一些常见用途：
+1. **字体优先级**：指定在显示特定语言或样式是优先使用哪种字体。
+2. **字体替换**：字体不可用时，定义替换字体。
+3. **字体特性**： 设置字体的渲染特性，如抗锯齿、亚像素渲染等。
+4. **语言支持**： 定义特定语言或字符集的字体。
+
+> `fonts.conf`文件的路径分为两种，一是系统级别的配置，文件位置是：`/etc/fonts/fonts.conf`，二是用户级别的配置，位置是：`~/.config/fontconfig/fonts.conf`
+
+**用户字体配置文件内容如下：**
+```shell
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+
+  <!-- 指定字体目录 -->
+  <!-- 系统级字体目录，用于存放系统范围内的字体，所有用户都可以访问这些字体 -->
+  <dir>/usr/share/fonts</dir>
+  <!-- 本地共享字体目录，类似于系统级目录，但管理员可以在这里安装特定于本地使用的字体 -->
+  <dir>/usr/local/share/fonts</dir>
+  <!-- 用户 XDG 目录中的字体，遵循 XDG 目录结构，通常在 ~/.local/share/fonts -->
+  <dir prefix="xdg">fonts</dir>
+  <!-- 用户主目录下的字体，用户可以在其主目录下安装私有字体 -->
+  <dir>~/.fonts</dir>
+
+  <!-- 全局字体设置，用于影响全系统范围内的字体渲染特性 -->
+  <!-- 启用自动微调，使字体在不同分辨率下更为清晰 -->
+  <match target="font">
+    <edit name="autohint" mode="assign">
+      <bool>true</bool>
+    </edit>
+    <!-- 启用抗锯齿，使字体边缘更平滑，减少锯齿现象 -->
+    <edit name="antialias" mode="assign">
+      <bool>true</bool>
+    </edit>
+    <!-- 启用内嵌点阵字体的使用，特别是针对小尺寸和特定字体样式时，提供更为清晰的显示 -->
+    <edit name="embeddedbitmap" mode="assign">
+      <bool>true</bool>
+    </edit>
+  </match>
+
+  <!-- 指定默认的英文字体系列，按优先级顺序定义 -->
+  <!-- 默认 serif 字体，通常用于正式场合的衬线字体 -->
+  <match>
+    <test name="family"><string>serif</string></test>
+    <edit name="family" mode="prepend"><string>Noto Sans</string></edit>
+  </match>
+
+  <!-- 默认 sans-serif 字体，常用于屏幕显示、网页等不需要衬线的字体 -->
+  <match>
+    <test name="family"><string>sans-serif</string></test>
+    <edit name="family" mode="prepend"><string>Noto Sans</string></edit>
+  </match>
+
+  <!-- 默认 monospace 字体，用于等宽字体，如代码编辑器和终端 -->
+  <match>
+    <test name="family"><string>monospace</string></test>
+    <edit name="family" mode="prepend"><string>Noto Sans Mono</string></edit>
+  </match>
+
+  <!-- 针对中文语言，优先使用 Noto Sans CJK SC 字体 -->
+  <!-- 优先 Noto Sans CJK SC，确保中文显示为该字体 -->
+  <match>
+    <test name="lang" compare="contains"><string>zh</string></test>
+    <edit name="family" mode="prepend"><string>Noto Sans CJK SC</string></edit>
+  </match>
+
+</fontconfig>
+```
