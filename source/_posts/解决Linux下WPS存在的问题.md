@@ -52,3 +52,11 @@ libtiffxx.so.6.0.0
 ```shell
 sudo pacman -S poppler-data
 ```
+
+**如还出现问题可能是Linux系统中缺少一些中文特定的字体，从而导致文档显示不正常。**
+```shell
+# ttf-wps-fonts 是 WPS 专用字体包
+sudo pacman -S ttf-wps-fonts
+sudo pacman -S noto-fonts-cjk
+```
+> 最后则需要在WPS中选择已安装的字体（如：Noto Sans CJK SC）
