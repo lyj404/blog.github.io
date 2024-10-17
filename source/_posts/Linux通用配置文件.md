@@ -185,6 +185,10 @@ fonts.conf是字体配置文件，用于定制和调整字体的渲染及优先�
 4. **语言支持**： 定义特定语言或字符集的字体。
 
 > `fonts.conf`文件的路径分为两种，一是系统级别的配置，文件位置是：`/etc/fonts/fonts.conf`，二是用户级别的配置，位置是：`~/.config/fontconfig/fonts.conf`
+**安装对应字体：**
+```shell
+sudo pacman -S ttf-roboto noto-fonts ttf-dejavu adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts 
+```
 
 **用户字体配置文件内容如下：**
 ```shell
@@ -218,31 +222,100 @@ fonts.conf是字体配置文件，用于定制和调整字体的渲染及优先�
     </edit>
   </match>
 
-  <!-- 指定默认的英文字体系列，按优先级顺序定义 -->
-  <!-- 默认 serif 字体，通常用于正式场合的衬线字体 -->
+  <!-- 英文默认字体使用 Roboto 和 Noto Serif ，终端使用 DejaVu Sans Mono 。 -->
   <match>
-    <test name="family"><string>serif</string></test>
-    <edit name="family" mode="prepend"><string>Noto Sans</string></edit>
+    <!-- 为所有 serif 字体族的请求添加 Noto Serif 作为默认字体 -->
+    <test qual="any" name="family">
+      <string>serif</string>
+    </test>
+    <edit name="family" mode="prepend" binding="strong">
+      <string>Noto Serif</string>
+    </edit>
+  </match>
+  <match target="pattern">
+    <!-- 为所有 sans-serif 字体族的请求添加 Roboto 作为默认字体 -->
+    <test qual="any" name="family">
+      <string>sans-serif</string>
+    </test>
+    <edit name="family" mode="prepend" binding="strong">
+      <string>Roboto</string>
+    </edit>
+  </match>
+  <match target="pattern">
+    <!-- 为所有等宽（monospace）字体族的请求添加 DejaVu Sans Mono 作为默认字体 -->
+    <test qual="any" name="family">
+      <string>monospace</string>
+    </test>
+    <edit name="family" mode="prepend" binding="strong">
+      <string>DejaVu Sans Mono</string>
+    </edit>
   </match>
 
-  <!-- 默认 sans-serif 字体，常用于屏幕显示、网页等不需要衬线的字体 -->
+  <!-- 中文默认字体使用思源黑体和思源宋体，不使用 Noto Sans CJK SC 是因为该字体会在特定情况下显示片假字。 -->
   <match>
-    <test name="family"><string>sans-serif</string></test>
-    <edit name="family" mode="prepend"><string>Noto Sans</string></edit>
+    <!-- 为中文语言的 serif 字体族请求添加思源宋体 CN -->
+    <test name="lang" compare="contains">
+      <string>zh</string>
+    </test>
+    <test name="family">
+      <string>serif</string>
+    </test>
+    <edit name="family" mode="prepend">
+      <string>Source Han Serif CN</string>
+    </edit>
+  </match>
+  <match>
+    <!-- 为中文语言的 sans-serif 字体族请求添加思源黑体 CN -->
+    <test name="lang" compare="contains">
+      <string>zh</string>
+    </test>
+    <test name="family">
+      <string>sans-serif</string>
+    </test>
+    <edit name="family" mode="prepend">
+      <string>Source Han Sans CN</string>
+    </edit>
+  </match>
+  <match>
+    <!-- 为中文语言的等宽（monospace）字体族请求添加 Noto Sans Mono CJK SC -->
+    <test name="lang" compare="contains">
+      <string>zh</string>
+    </test>
+    <test name="family">
+      <string>monospace</string>
+    </test>
+    <edit name="family" mode="prepend">
+      <string>Noto Sans Mono CJK SC</string>
+    </edit>
   </match>
 
-  <!-- 默认 monospace 字体，用于等宽字体，如代码编辑器和终端 -->
-  <match>
-    <test name="family"><string>monospace</string></test>
-    <edit name="family" mode="prepend"><string>Noto Sans Mono</string></edit>
-  </match>
-
-  <!-- 针对中文语言，优先使用 Noto Sans CJK SC 字体 -->
-  <!-- 优先 Noto Sans CJK SC，确保中文显示为该字体 -->
-  <match>
-    <test name="lang" compare="contains"><string>zh</string></test>
-    <edit name="family" mode="prepend"><string>Noto Sans CJK SC</string></edit>
-  </match>
+  <!-- 处理Windows 和 Linux下的常用中文字体 -->
+  <!-- 将所有常见的中文字体映射到思源黑体和思源宋体，这样当这些字体未安装时会使用思源黑体和思源宋体。
+       解决特定程序指定使用某特定字体，并且在字体不存在情况下不会使用回退字体导致中文显示不正常的情况。 -->
+ <match target="pattern">
+        <test qual="any" name="family">
+            <string>SimHei</string>
+        </test>
+        <edit name="family" mode="assign" binding="same">
+            <string>Source Han Sans CN</string>
+        </edit>
+    </match>
+    <match target="pattern">
+        <test qual="any" name="family">
+            <string>SimSun</string>
+        </test>
+        <edit name="family" mode="assign" binding="same">
+            <string>Source Han Serif CN</string>
+        </edit>
+    </match>
+    <match target="pattern">
+        <test qual="any" name="family">
+            <string>SimSun-18030</string>
+        </test>
+        <edit name="family" mode="assign" binding="same">
+            <string>Source Han Serif CN</string>
+        </edit>
+    </match>
 
 </fontconfig>
 ```
