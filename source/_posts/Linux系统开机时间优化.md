@@ -4,7 +4,7 @@ date: 2024-10-19 15:43:23
 tags: Linux
 categories: Linux
 keywords: Linux通用配置文件
-cover: https://s21.ax1x.com/2024/09/20/pAKX2o4.png
+cover: https://s21.ax1x.com/2024/03/14/pFcL7lj.png
 description: 通过禁用不必要的服务、优化 GRUB 设置和分析启动过程来优化Linux系统开机时间
 ---
 # 优化系统开机时间
