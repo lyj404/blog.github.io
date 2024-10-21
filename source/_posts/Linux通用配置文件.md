@@ -189,6 +189,7 @@ fonts.conf是字体配置文件，用于定制和调整字体的渲染及优先�
 ```shell
 sudo pacman -S ttf-roboto noto-fonts ttf-dejavu adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts 
 ```
+> 由于我使用的`Endeavour OS`系统是基于`Arch Linux`的一个发行版，因此可以使用pacman安装字体。
 
 **用户字体配置文件内容如下：**
 ```shell
