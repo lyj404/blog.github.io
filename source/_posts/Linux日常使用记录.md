@@ -346,3 +346,45 @@ unzip archive.zip                       # 解压 zip 文件
 gzip file.txt    # 压缩文件
 gunzip file.gz   # 解压文件
 ```
+
+# nano
+## nano基本操作快捷键
+* **保存文件：** `Ctrl + o`
+* **退出nano：** `Ctrl + x`
+* **剪贴文本：** `Ctrl + k`
+* **粘贴文本：** `Ctrl + u`
+* **选择文本：** `Ctrl + Shift + 6`
+* **撤销：** `Alt + u`
+* **重做：** `Alt + e`
+* **移动到行首：** `Ctrl + a`
+* **移动到行尾：** `Ctrl + e`
+* **向下翻页：** `Ctrl + y`
+* **向下翻页：** `Ctrl + v`
+* **移动到文件开头：** `Ctrl + home`
+* **移动到文件结尾：** `Ctrl + end`
+* **搜索文本：** `Ctrl + w`
+* **搜索并替换文本：** `Ctrl + \`
+## nano常用配置
+nano全局配置文件路径`/etc/nanorc` ，用户配置路径`~/.nanorc`
+```bash
+# 显示行号
+set const
+# 设置 Tab 大小
+set tabsize 4
+# 将tab转为空格
+set tabstospaces
+# 显示光标位置
+set cursorpos
+# 高亮当前行
+set smarthome
+# 启用鼠标选择和复制
+set mouse
+# 禁用自动换行
+set nowrap
+# 保存时修剪行尾空白
+set trimblanks
+# 禁用备份文件
+set backup
+# 启用语法高亮
+include "/usr/share/nano/*.nanorc"
+```
