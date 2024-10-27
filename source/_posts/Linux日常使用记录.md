@@ -368,23 +368,21 @@ gunzip file.gz   # 解压文件
 nano全局配置文件路径`/etc/nanorc` ，用户配置路径`~/.nanorc`
 ```bash
 # 显示行号
-set const
+set linenumbers
 # 设置 Tab 大小
 set tabsize 4
 # 将tab转为空格
 set tabstospaces
-# 显示光标位置
-set cursorpos
-# 高亮当前行
-set smarthome
-# 启用鼠标选择和复制
-set mouse
+# 允许自动缩进
+set autoindent
 # 禁用自动换行
 set nowrap
 # 保存时修剪行尾空白
 set trimblanks
 # 禁用备份文件
 set backup
+# 不在文件末尾添加新行
+set nonewlines
 # 启用语法高亮
 include "/usr/share/nano/*.nanorc"
 ```
