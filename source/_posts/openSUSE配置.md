@@ -180,7 +180,6 @@ socks5 127.0.0.1 port
 ```shell
 proxychains4 <你的命令行>
 ```
-下载clash-nyanpasu[clash-nyanpasu](https://github.com/keiko233/clash-nyanpasu/releases/download/v1.4.0/clash-nyanpasu_1.4.0_amd64.AppImage)
 
 ## 安装字体
 ```shell
