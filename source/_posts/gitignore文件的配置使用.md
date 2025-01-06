@@ -4,6 +4,7 @@ date: 2024-03-02 17:16:07
 tags: Git
 categories: BackEnd
 keywords: .gitignore
+cover: https://s21.ax1x.com/2025/01/06/pE9wOhD.png
 description: .gitignore文件的作用是告诉Git哪些文件或目录不需要纳入版本控制。当您在项目中创建.gitignore文件并列出要忽略的文件或目录时，Git会在执行各种操作（如git status、git add、git commit等）时忽略这些被指定的文件或目录。
 ---
 在使用Git的过程中，有些文件比如说日志、临时文件、编译的中间文件文件等不需要提交到Git仓库，这个时候需要设置对应的忽略规则，来忽略这些文件的提交。使用场景：比如说在使用`git add .`命令的时候不小心把不想提交的文件添加到缓存中去了，虽然可以使用`git reset HEAD example.txt
