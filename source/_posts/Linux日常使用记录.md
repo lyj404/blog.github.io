@@ -364,6 +364,43 @@ gunzip file.gz   # 解压文件
 * **移动到文件结尾：** `Ctrl + end`
 * **搜索文本：** `Ctrl + w`
 * **搜索并替换文本：** `Ctrl + \`
+## 切换用户
+`su`命令用来在Linux系统下切换用户身份。
+```shell
+# 切换到指定到指定用户。若不指定用户名，默认切换到root用户
+su [username]
+```
+**常用参数：**
+* `-`或`-l`或`--login`：启动一个登录shell，会加载目标用户的环境变量，类似于重新登录
+* `-c [command]`：运行指定命令，然后退出。例如：`su -c "ls -a"`
+* `-s [shell]`：指定要使用的shell。默认使用目标用户的登录shell
+* `-m`或`--preserve-environment`：保留当前环境变量。而不是切换到目标用户的环境。
+* `-p`：与`-m`相同，保留环境
+## 切换shell
+`chsh`用于更改用户登录shell。
+**基本用户：**
+```shell
+chsh -s /path/to/shell
+```
+常用参数：
+* `-s，--shell SHELL`：指定新的登录shell。例如：`chsh -s /bin/zsh`
+* `-l --list-shells`：列出系统商可用的shell
+* `-h，--help`：显示帮助信息
+* `-u，--username USER`：指定要更改shell的用户（需要root权限）。例如：`sudo chsh -s /bin/bash username`
+## 系统手册
+`man` 是用于查看系统手册页的，可以帮助了解命令的用法和参数。
+**基本用法：**
+```shell
+man [section] name
+```
+**常用参数：**
+- **`-k, --apropos keyword`**：搜索手册页中包含指定关键字的条目。例如：`man -k ssh`
+- **`-f, --whatis name`**：显示指定命令或文件的简要描述。例如：`man -f ls`
+- **`-a`**：显示所有匹配的手册页，而不仅仅是第一个。例如：`man -a printf`
+- **`-l, --local-file file`**：查看本地文件中的手册页。例如：`man -l ./myfile.1`
+- **`-C config_file`**：使用指定的配置文件。例如：`man -C /path/to/config`
+- **`-P pager`**：指定用于显示手册页的分页程序。例如：`man -P less ls`
+- **`-M path`**：指定手册页的搜索路径。例如：`man -M /usr/share/man ls`
 ## nano常用配置
 nano全局配置文件路径`/etc/nanorc` ，用户配置路径`~/.nanorc`
 ```bash
